@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AM Analytics — Expert intelligence systems. Real insight. A clear path to smarter decisions." />
+  <title>AM Analytics — Find What Moves Your Data</title>
+
+  <!-- Stylesheets (load order matters) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="#" class="nav__logo" aria-label="AM Analytics home">
+        <div class="nav__logo-mark" aria-hidden="true">A</div>
+        <div>
+          <span class="nav__logo-text">AM Analytics</span>
+          <span class="nav__logo-sub">Intelligence Systems</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#why"       class="nav__link">Why AM</a></li>
+        <li><a href="#services"  class="nav__link">Services</a></li>
+        <li><a href="#how"       class="nav__link">How It Works</a></li>
+        <li><a href="#clients"   class="nav__link">Clients</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="nav__cta">
+        <button class="btn-ghost">Contact</button>
+        <button class="btn-primary">Get Started</button>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="#why"      class="nav__mobile-link">Why AM</a>
+    <a href="#services" class="nav__mobile-link">Services</a>
+    <a href="#how"      class="nav__mobile-link">How It Works</a>
+    <a href="#clients"  class="nav__mobile-link">Clients</a>
+    <button class="btn-primary" style="margin-top:8px; border-radius:12px; padding:14px;">Get Started</button>
+  </nav>
+
+
+  <!-- ════════════════════════════════════
+       HERO — PARALLAX SCENE
+  ════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-title">
+
+    <!-- Parallax Layers -->
+    <div class="parallax-scene" aria-hidden="true">
+      <div class="layer-sky"></div>
+      <div class="layer-forest"></div>
+      <div class="layer-mountains"></div>
+    </div>
+
+    <!-- Gradient Overlays -->
+    <div class="hero-overlay-top"    aria-hidden="true"></div>
+    <div class="hero-overlay-bottom" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+
+      <!-- Trust Badge -->
+      <div class="hero-trust" aria-label="Social proof">
+        <div class="hero-trust__dot" aria-hidden="true"></div>
+        <span class="hero-trust__text">+ Trusted by 200+ organizations across 14 industries</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-headline" id="hero-title">
+        Find What Moves
+        <em>Your Data</em>
+      </h1>
+
+      <!-- Sub -->
+      <p class="hero-sub">
+        Expert intelligence systems. Real insight. A clear path to smarter
+        decisions — wherever your data takes you.
+      </p>
+
+      <!-- Search Bar -->
+      <div class="hero-search" role="search">
+        <label for="hero-input" class="sr-only">Tell us your data challenge</label>
+        <input
+          id="hero-input"
+          type="text"
+          placeholder="Tell us your data challenge…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="hero-search__btn" type="button" aria-label="Explore Platform">
+          Explore Platform →
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Scroll Hint -->
+    <div class="hero-scroll" role="button" tabindex="0" aria-label="Scroll to explore">
+      <span class="hero-scroll__text">Scroll to explore</span>
+      <div class="hero-scroll__arrow" aria-hidden="true"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       STATS STRIP
+  ════════════════════════════════════ -->
+  <div class="stats-strip" aria-label="Key metrics">
+    <div class="stats-strip__inner">
+      <div class="stat-item reveal">
+        <div class="stat-item__number" data-target="200" data-suffix="+">0+</div>
+        <div class="stat-item__label">Organizations</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-item__number" data-target="14" data-suffix="">0</div>
+        <div class="stat-item__label">Industries Served</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-item__number" data-target="4.9" data-suffix="★">0★</div>
+        <div class="stat-item__label">Average Rating</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-item__number" data-target="99" data-suffix="%">0%</div>
+        <div class="stat-item__label">Uptime SLA</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════
+       WHY AM ANALYTICS
+  ════════════════════════════════════ -->
+  <section class="why-section" id="why" aria-labelledby="why-title">
+    <div class="why-section__inner container">
+
+      <!-- Left: Copy -->
+      <div class="why-section__copy">
+        <div class="section-label reveal">Why AM Analytics</div>
+        <h2 class="section-title reveal reveal-delay-1" id="why-title">
+          Your data has a story.<br/>
+          <em>We help you read it.</em>
+        </h2>
+        <p class="section-desc reveal reveal-delay-2">
+          We don't just hand you dashboards — we partner with your team to build
+          intelligence infrastructure that scales. Real decisions, backed by real data.
+        </p>
+
+        <!-- Feature Pills -->
+        <div class="feature-pills reveal reveal-delay-3">
+          <div class="feature-pill"><span class="feature-pill__icon">⚡</span> Real-time Streams</div>
+          <div class="feature-pill"><span class="feature-pill__icon">🔒</span> SOC 2 Compliant</div>
+          <div class="feature-pill"><span class="feature-pill__icon">🤖</span> AI-Powered Models</div>
+          <div class="feature-pill"><span class="feature-pill__icon">📡</span> Custom Pipelines</div>
+          <div class="feature-pill"><span class="feature-pill__icon">🌐</span> Global Scale</div>
+          <div class="feature-pill"><span class="feature-pill__icon">🎯</span> Zero Data Loss</div>
+        </div>
+      </div>
+
+      <!-- Right: Visual Card -->
+      <div class="why-section__visual reveal reveal-delay-2">
+        <div class="why-visual-card">
+          <!-- Mini Chart -->
+          <div class="chart-preview" aria-label="Performance chart">
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+            <div class="chart-bar" style="height:0%"></div>
+          </div>
+
+          <!-- Metrics -->
+          <div class="chart-metric">
+            <span class="chart-metric__label">Prediction Accuracy</span>
+            <span class="chart-metric__value">97.4%</span>
+            <span class="chart-metric__delta">↑ 12.3%</span>
+          </div>
+          <div class="chart-metric">
+            <span class="chart-metric__label">Query Latency (p99)</span>
+            <span class="chart-metric__value">18ms</span>
+            <span class="chart-metric__delta">↓ 40%</span>
+          </div>
+          <div class="chart-metric">
+            <span class="chart-metric__label">Data Processed / Day</span>
+            <span class="chart-metric__value">4.2TB</span>
+            <span class="chart-metric__delta">↑ 3.1×</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════ -->
+  <section class="services-section" id="services" aria-labelledby="services-title">
+
+    <div class="services-section__header reveal">
+      <div class="section-label" style="justify-content:center;">What We Do</div>
+      <h2 class="section-title" id="services-title">
+        Intelligence for every<br/><em>layer of your stack</em>
+      </h2>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <div class="service-card__icon" aria-hidden="true">🔭</div>
+        <h3 class="service-card__title">Predictive Analytics</h3>
+        <p class="service-card__desc">
+          Machine learning models trained on your data to forecast trends,
+          churn, demand, and risk — before they happen.
+        </p>
+        <span class="service-card__link">Learn more →</span>
+      </article>
+
+      <article class="service-card reveal reveal-delay-1">
+        <div class="service-card__icon" aria-hidden="true">⚡</div>
+        <h3 class="service-card__title">Real-time Pipelines</h3>
+        <p class="service-card__desc">
+          Sub-second event streaming and processing infrastructure. Kafka,
+          Flink, Spark — engineered for your scale and velocity.
+        </p>
+        <span class="service-card__link">Learn more →</span>
+      </article>
+
+      <article class="service-card reveal reveal-delay-2">
+        <div class="service-card__icon" aria-hidden="true">🎛️</div>
+        <h3 class="service-card__title">Decision Intelligence</h3>
+        <p class="service-card__desc">
+          Embed AI recommendations directly into your products and workflows.
+          From A/B testing to full autonomous decision loops.
+        </p>
+        <span class="service-card__link">Learn more →</span>
+      </article>
+
+      <article class="service-card reveal reveal-delay-1">
+        <div class="service-card__icon" aria-hidden="true">🗄️</div>
+        <h3 class="service-card__title">Data Warehousing</h3>
+        <p class="service-card__desc">
+          Architected on Snowflake, BigQuery, or Redshift — clean schemas,
+          fast queries, and governance that auditors will love.
+        </p>
+        <span class="service-card__link">Learn more →</span>
+      </article>
+
+      <article class="service-card reveal reveal-delay-2">
+        <div class="service-card__icon" aria-hidden="true">📊</div>
+        <h3 class="service-card__title">Executive Dashboards</h3>
+        <p class="service-card__desc">
+          Beautiful, real-time BI surfaces that turn raw numbers into the one
+          truth your leadership team can act on with confidence.
+        </p>
+        <span class="service-card__link">Learn more →</span>
+      </article>
+
+      <article class="service-card reveal reveal-delay-3">
+        <div class="service-card__icon" aria-hidden="true">🛡️</div>
+        <h3 class="service-card__title">Data Governance</h3>
+        <p class="service-card__desc">
+          Lineage tracking, access control, PII masking, and compliance
+          reporting. GDPR, HIPAA, SOC 2 — all covered.
+        </p>
+        <span class="service-card__link">Learn more →</span>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       HOW IT WORKS
+  ════════════════════════════════════ -->
+  <section class="how-section" id="how" aria-labelledby="how-title">
+    <div class="how-section__inner container">
+
+      <!-- Left: Steps -->
+      <div>
+        <div class="section-label reveal">The Process</div>
+        <h2 class="section-title reveal reveal-delay-1" id="how-title">
+          Three steps to<br/><em>data clarity.</em>
+        </h2>
+
+        <ol class="steps-list" aria-label="Process steps">
+          <li class="step-item reveal reveal-delay-2">
+            <div class="step-item__num" aria-hidden="true">01</div>
+            <div class="step-item__content">
+              <h3 class="step-item__title">Discovery & Audit</h3>
+              <p class="step-item__desc">
+                We map your existing data landscape — sources, gaps, quality
+                issues, and latent value — in a structured 2-week audit.
+              </p>
+            </div>
+          </li>
+          <li class="step-item reveal reveal-delay-3">
+            <div class="step-item__num" aria-hidden="true">02</div>
+            <div class="step-item__content">
+              <h3 class="step-item__title">Architect & Build</h3>
+              <p class="step-item__desc">
+                Our engineers design and deploy the pipeline, models, and
+                dashboards tailored to your specific business questions.
+              </p>
+            </div>
+          </li>
+          <li class="step-item reveal reveal-delay-4">
+            <div class="step-item__num" aria-hidden="true">03</div>
+            <div class="step-item__content">
+              <h3 class="step-item__title">Activate & Scale</h3>
+              <p class="step-item__desc">
+                Live systems, trained teams, and ongoing optimization. We don't
+                disappear at go-live — we grow the system with you.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Right: Terminal -->
+      <div class="reveal reveal-delay-2">
+        <div class="terminal-card" role="img" aria-label="Analytics platform terminal preview">
+          <div class="terminal-card__header">
+            <div class="terminal-dot terminal-dot--red"   aria-hidden="true"></div>
+            <div class="terminal-dot terminal-dot--yellow"aria-hidden="true"></div>
+            <div class="terminal-dot terminal-dot--green" aria-hidden="true"></div>
+            <span class="terminal-title">am-analytics / pipeline</span>
+          </div>
+          <div class="terminal-card__body" aria-live="polite">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-cmd">am pipeline deploy --env production</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-out">✓ Schema validation passed</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-out">✓ 12 data sources connected</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-out">✓ ML model v3.2 loaded</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-muted">→ Streaming 4.2TB/day @ 18ms p99</span>
+            </div>
+            <div class="terminal-line" style="margin-top:12px;">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-cmd">am insights query "Q1 forecast"</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-out">Revenue ↑ 23% · Churn ↓ 8.4%</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-out">Anomaly detected: Segment C spike</span>
+            </div>
+            <div class="terminal-line" style="margin-top:12px;">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-cmd terminal-blink"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       TESTIMONIALS
+  ════════════════════════════════════ -->
+  <section class="testimonials-section" id="clients" aria-labelledby="testimonials-title">
+
+    <div class="testimonials-section__header container">
+      <div class="section-label reveal" style="justify-content:center;">Client Stories</div>
+      <h2 class="section-title reveal reveal-delay-1" id="testimonials-title">
+        Don't take our word for it.
+      </h2>
+    </div>
+
+    <div class="testimonials-track container">
+
+      <article class="testimonial-card reveal">
+        <div class="testimonial-card__quote" aria-hidden="true">"</div>
+        <blockquote class="testimonial-card__text">
+          AM Analytics transformed our forecasting from gut-feel to precision.
+          Our inventory costs dropped 31% in the first quarter alone.
+        </blockquote>
+        <div class="testimonial-card__author">
+          <div class="author-avatar" aria-hidden="true">SP</div>
+          <div>
+            <div class="author-name">Sarah Patel</div>
+            <div class="author-role">VP Operations, RetailEdge Inc.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-card__quote" aria-hidden="true">"</div>
+        <blockquote class="testimonial-card__text">
+          The real-time pipeline they built handles 8 billion events a day
+          without breaking a sweat. Absolutely world-class engineering.
+        </blockquote>
+        <div class="testimonial-card__author">
+          <div class="author-avatar" aria-hidden="true">JK</div>
+          <div>
+            <div class="author-name">James Kim</div>
+            <div class="author-role">CTO, Finova Technologies</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal reveal-delay-4">
+        <div class="testimonial-card__quote" aria-hidden="true">"</div>
+        <blockquote class="testimonial-card__text">
+          We finally have one source of truth. Leadership makes decisions in
+          hours now, not weeks. AM Analytics delivered what others promised.
+        </blockquote>
+        <div class="testimonial-card__author">
+          <div class="author-avatar" aria-hidden="true">MR</div>
+          <div>
+            <div class="author-name">Maria Rodriguez</div>
+            <div class="author-role">Chief Data Officer, HealthPlus</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       CTA
+  ════════════════════════════════════ -->
+  <section class="cta-section" aria-labelledby="cta-title">
+    <div class="cta-inner">
+      <div class="section-label reveal" style="justify-content:center;">Get Started</div>
+      <h2 class="section-title reveal reveal-delay-1" id="cta-title">
+        Ready to find what<br/><em>moves your data?</em>
+      </h2>
+      <p class="section-desc reveal reveal-delay-2" style="text-align:center; margin:0 auto var(--space-xl);">
+        Book a free 30-minute discovery call. We'll audit your current
+        data setup and show you exactly where the value is hiding.
+      </p>
+      <div class="cta-actions reveal reveal-delay-3">
+        <a href="#" class="btn-large">Book a Discovery Call</a>
+        <a href="#services" class="btn-outline-large">See All Services</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#" class="footer__brand-logo" aria-label="AM Analytics home">
+            <div class="footer__brand-mark" aria-hidden="true">A</div>
+            <span class="footer__brand-name">AM Analytics</span>
+          </a>
+          <p class="footer__brand-desc">
+            Expert intelligence systems for organizations that run on data.
+            Real insight. Real decisions. Real results.
+          </p>
+          <div class="footer__newsletter">
+            <label for="footer-email" class="sr-only">Your email address</label>
+            <input id="footer-email" type="email" placeholder="Your email address" />
+            <button class="footer__newsletter-btn" type="button">Subscribe</button>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <div class="footer__col-title">Platform</div>
+          <ul class="footer__links" role="list">
+            <li><a href="#" class="footer__link">Predictive Analytics</a></li>
+            <li><a href="#" class="footer__link">Real-time Pipelines</a></li>
+            <li><a href="#" class="footer__link">Decision Intelligence</a></li>
+            <li><a href="#" class="footer__link">Data Warehousing</a></li>
+            <li><a href="#" class="footer__link">Dashboards</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links" role="list">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Press</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Resources</div>
+          <ul class="footer__links" role="list">
+            <li><a href="#" class="footer__link">Documentation</a></li>
+            <li><a href="#" class="footer__link">Case Studies</a></li>
+            <li><a href="#" class="footer__link">API Reference</a></li>
+            <li><a href="#" class="footer__link">Status Page</a></li>
+            <li><a href="#" class="footer__link">Security</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 AM Analytics. All rights reserved.</p>
+
+        <div class="footer__socials" aria-label="Social media links">
+          <a href="#" class="footer__social" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer__social" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer__social" aria-label="GitHub">⌥</a>
+        </div>
+
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#" class="footer__legal-link">Privacy</a>
+          <a href="#" class="footer__legal-link">Terms</a>
+          <a href="#" class="footer__legal-link">Cookies</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Scripts (defer for performance) -->
+  <script src="js/parallax.js"   defer></script>
+  <script src="js/nav.js"        defer></script>
+  <script src="js/animations.js" defer></script>
+
+</body>
+</html>
