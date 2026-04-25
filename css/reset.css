@@ -1,31 +1,41 @@
-/* ============================================
-   AM Analytics — Reset & Base
-   ============================================ */
-
+/* ─── RESET ─── */
 *, *::before, *::after {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  background-color: var(--clr-bg-deep);
+  color: var(--clr-white);
   font-family: var(--font-body);
-  background-color: var(--clr-sky-deep);
-  color: var(--clr-text-light);
+  line-height: 1.5;
   overflow-x: hidden;
-  line-height: 1.6;
 }
 
-img {
-  display: block;
+img, video {
   max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
@@ -33,24 +43,11 @@ a {
   color: inherit;
 }
 
-button {
-  cursor: pointer;
-  font-family: inherit;
-  border: none;
-  outline: none;
-}
-
-input {
-  font-family: inherit;
-  outline: none;
-  border: none;
-}
-
 ul, ol {
   list-style: none;
 }
 
-/* ─── Utility Classes ─── */
+/* ─── UTILITIES ─── */
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -64,16 +61,82 @@ ul, ol {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
-/* ─── Reveal Animations ─── */
+.label-mono {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--space-md);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+}
+
+.h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.p-muted {
+  color: var(--clr-text-muted);
+  font-size: 1.1rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* ─── REVEAL ANIMATIONS ─── */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transform: translateY(32px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
 }
 
 .reveal.visible {
@@ -85,4 +148,3 @@ ul, ol {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }

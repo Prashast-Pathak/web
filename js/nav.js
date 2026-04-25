@@ -1,66 +1,61 @@
 /* ============================================
-   AM Analytics — Navigation Controller
+   AM Analytics — Navigation Logic
    ============================================ */
 
 (function () {
   'use strict';
 
-  function init() {
-    const nav       = document.querySelector('.nav');
-    const hamburger = document.querySelector('.nav__hamburger');
-    const mobileNav = document.querySelector('.nav__mobile');
-    const mobileLinks = document.querySelectorAll('.nav__mobile-link');
+  const nav = document.querySelector('.nav');
+  const hamburger = document.querySelector('.nav__hamburger');
+  const mobileMenu = document.querySelector('.nav__mobile');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__link');
 
-    // ─── Scroll: add .scrolled class ───
-    function handleScroll() {
-      if (window.pageYOffset > 30) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
+  // ─── Scroll Effect ───
+  function handleScroll() {
+    if (window.scrollY > 30) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    
+    // Highlight Active Link
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= (sectionTop - 150)) {
+        current = section.getAttribute('id');
       }
-    }
+    });
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // run on load
-
-    // ─── Mobile Menu Toggle ───
-    if (hamburger && mobileNav) {
-      hamburger.addEventListener('click', () => {
-        const isOpen = mobileNav.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', isOpen);
-        // Animate hamburger lines
-        const spans = hamburger.querySelectorAll('span');
-        if (isOpen) {
-          spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-          spans[1].style.opacity = '0';
-          spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-        } else {
-          spans[0].style.transform = '';
-          spans[1].style.opacity = '';
-          spans[2].style.transform = '';
-        }
-      });
-
-      // Close on link click
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileNav.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', false);
-        });
-      });
-
-      // Close on outside click
-      document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !mobileNav.contains(e.target)) {
-          mobileNav.classList.remove('open');
-        }
-      });
-    }
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').slice(1) === current) {
+        link.classList.add('active');
+      }
+    });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  // ─── Mobile Menu ───
+  function toggleMenu() {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
   }
+
+  // ─── Events ───
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  hamburger.addEventListener('click', toggleMenu);
+  
+  // Close menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Initial Check
+  handleScroll();
+
 })();
